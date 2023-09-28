@@ -1,0 +1,24 @@
+<script>
+function validateform()
+{
+var name=document.myform.t1.value;
+var password=document.myform.t2.value;
+
+if(name=="")<
+{
+alert("Name can't be blank");
+return false;
+}
+else if(password.length<6||password.length>10)
+{
+alert("Password must be at least 6 character & at most 10 characters long.");
+return false;
+}
+}
+</script>
+<body>
+<form name="my form" method="post" action="abc.jsp" onsubmit="return validateform()">
+Name:<input type="text" name="t1">*<i>This field is mandatory</i><br/>
+Password:<input type="Password" name="t2"></br>
+<input type="submit" value="register">
+</form> 
